@@ -4,12 +4,16 @@ BRANCH=main-2021
 # コミットメッセージ
 MESSAGE=update
 
+# 追跡するリポジトリ(REPO)を追加
+add:
+	git submodule add https://github.com/nshun/${REPO}.git ${REPO}
+
 # リモートの変更を取り込む
 fetch:
 	git pull origin ${BRANCH}
 	git submodule update --remote --merge
 
-# ブランチを切り替える（無ければ作成）
+# ブランチ(BRANCH)を切り替える（無ければ作成）
 checkout:
 	git checkout -B ${BRANCH}
 	git submodule foreach git checkout -B ${BRANCH}
