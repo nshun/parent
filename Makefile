@@ -12,6 +12,8 @@ checkout:
 	git submodule foreach git checkout -B ${BRANCH}
 
 commit:
-	git add .
+	git submodule foreach git add -A
+	git submodule foreach git diff-index --quiet HEAD || git commit -m '${MESSAGE}'
+	git add -A
 	git commit -m '${MESSAGE}'
 	git push origin ${BRANCH} --recurse-submodules=on-demand
