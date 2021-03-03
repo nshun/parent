@@ -1,4 +1,5 @@
-BRANCH=main # ブランチ名を指定
+# ブランチ名を指定
+BRANCH=main
 
 # コミットメッセージ
 MESSAGE=update
