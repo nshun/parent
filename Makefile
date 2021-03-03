@@ -5,7 +5,7 @@ MESSAGE=update
 
 fetch:
 	git pull origin ${BRANCH}
-	git submodule foreach git pull origin ${BRANCH}
+	git submodule update --remote --merge
 
 checkout:
 	git checkout -B ${BRANCH}
