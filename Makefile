@@ -18,3 +18,10 @@ commit:
 	git add -A
 	git commit -m '${MESSAGE}'
 	git push origin ${BRANCH} --recurse-submodules=on-demand
+
+commit-force:
+	git submodule foreach git add -A
+	git commit -m '${MESSAGE}' --allow-empty
+	git add -A
+	git commit -m '${MESSAGE}'
+	git push origin ${BRANCH} --recurse-submodules=on-demand
