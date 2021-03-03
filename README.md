@@ -1,9 +1,21 @@
-## submodule の更新方法
+## 新しいブランチを作る場合
 
 ```
-git submodule foreach git add -A
-git submodule foreach git commit -m 'submodule update'
-git submodule foreach git push --recurse-submodules=on-demand
-git commit -am 'update'
-git push
+make BRANCH=main-2021 checkout
+```
+
+**Makefile の `BRANCH` を編集すること**
+
+## 変更を各リポジトリに適用させる場合
+
+変更があるリポジトリのみ
+
+```
+make MESSAGE="update" commit-push
+```
+
+ブランチ作成直後など、すべてのリポジトリに
+
+```
+make MESSAGE="update" commit-push-force
 ```
