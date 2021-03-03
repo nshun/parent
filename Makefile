@@ -1,5 +1,5 @@
 # ブランチ名を指定
-BRANCH=main
+BRANCH=main-2021
 
 # コミットメッセージ
 MESSAGE=update
