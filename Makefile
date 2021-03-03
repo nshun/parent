@@ -9,6 +9,12 @@ add-repo:
 	git submodule add https://github.com/nshun/${REPO}.git ${REPO}
 add: add-repo checkout
 
+# 追跡するリポジトリ(REPO)の削除
+deinit:
+	git submodule deinit -f ${REPO}
+	git rm -f ${REPO}
+	rm -rf .git/modules/${REPO}
+
 # リモートの変更を取り込む
 fetch:
 	git pull origin ${BRANCH}
