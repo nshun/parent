@@ -29,7 +29,7 @@ checkout:
 commit-push:
 	git submodule foreach git add -A
 	git submodule foreach "git diff-index --quiet HEAD || git commit -m '${MESSAGE}'"
-	git add .
+	git add -A
 	git commit -m '${MESSAGE}'
 	git push origin ${BRANCH} --recurse-submodules=on-demand
 
