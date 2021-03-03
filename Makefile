@@ -22,6 +22,7 @@ commit:
 commit-force:
 	git submodule foreach git add -A
 	git commit -m '${MESSAGE}' --allow-empty
+	git submodule foreach git push origin ${BRANCH}
 	git add -A
 	git commit -m '${MESSAGE}'
-	git push origin ${BRANCH} --recurse-submodules=on-demand
+	git push origin ${BRANCH}
