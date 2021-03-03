@@ -5,8 +5,9 @@ BRANCH=main-2021
 MESSAGE=update
 
 # 追跡するリポジトリ(REPO)を追加
-add:
+add-repo:
 	git submodule add https://github.com/nshun/${REPO}.git ${REPO}
+add: add-repo checkout
 
 # リモートの変更を取り込む
 fetch:

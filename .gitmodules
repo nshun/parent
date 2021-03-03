@@ -7,3 +7,6 @@
 [submodule "sub3"]
 	path = sub3
 	url = https://github.com/nshun/sub3.git
+[submodule "sub4"]
+	path = sub4
+	url = https://github.com/nshun/sub4.git
